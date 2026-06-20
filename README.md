@@ -6,7 +6,7 @@ We uncover embodiment scaling laws: training on diverse robot embodiments enable
 https://github.com/user-attachments/assets/757c505f-690a-4dc3-b996-f062b88c5bcf
 
 
-**[Website](https://embodiment-scaling-laws.github.io/) |  [Paper](https://arxiv.org/pdf/2505.05753) | [Models (RL Experts)](https://drive.google.com/file/d/16UgSzShxdfoj8ZT_WemAawXZq-wXLf7l/view?usp=sharing)**
+**[Website](https://embodiment-scaling-laws.github.io/) |  [Paper](https://arxiv.org/pdf/2505.05753) | [Models (RL Experts)](https://drive.google.com/file/d/16UgSzShxdfoj8ZT_WemAawXZq-wXLf7l/view?usp=sharing) | [Models (URMA Distillation)](https://drive.google.com/file/d/1URppLGsurZ8wegEcG8_93ftS2t7UyQ1z/view?usp=drive_link)**
 
 If you find the codebase useful, please consider citing:
 ```
@@ -55,7 +55,7 @@ bash scripts/expert/train_batch.sh --tasks Gendog1 Gendog2 Gendog3 Gendog4 Gendo
 
 File `exts/embodiment_scaling_laws/embodiment_scaling_laws/tasks/configs/environment/__init__.py` contains all the task names that we can run. For example, for `GenBot1k`, we can run `Gendog{i}` where `i` could range from `0` to `331`. 
 
-Optionally: We provide the well trained checkpoints [here](https://drive.google.com/file/d/16UgSzShxdfoj8ZT_WemAawXZq-wXLf7l/view?usp=sharing)(size=5G).
+Optionally: We provide the well-trained RL expert checkpoints [here](https://drive.google.com/file/d/16UgSzShxdfoj8ZT_WemAawXZq-wXLf7l/view?usp=sharing)(size=5G).
 
 ### 2. RL Policy Evaluation
 To evaluate and visualize the trained policy, run
@@ -83,6 +83,8 @@ To train a student policy, we load the datasets from all robots and perform supe
 For complete policy distillation, check ready-to-go scripts in `scripts/distillation/urma_distillation`.
 
 Please note that part of the dataset is cached in RAM to minimize I/O bottlenecks. A machine with 128 GB of RAM should be sufficient to run all commands. Reducing `--max_files_in_memory` will decrease the RAM requirement roughly linearly, but at the cost of relying on more localized gradient estimates, which may degrade model performance.
+
+**Optionally:** We provide the well-trained URMA distillation checkpoints [here](https://drive.google.com/file/d/1URppLGsurZ8wegEcG8_93ftS2t7UyQ1z/view?usp=drive_link) (size=1G).
 
 
 ### 2. Distilled Policy Evaluation 
