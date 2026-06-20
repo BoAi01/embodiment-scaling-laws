@@ -55,7 +55,7 @@ bash scripts/expert/train_batch.sh --tasks Gendog1 Gendog2 Gendog3 Gendog4 Gendo
 
 File `exts/embodiment_scaling_laws/embodiment_scaling_laws/tasks/configs/environment/__init__.py` contains all the task names that we can run. For example, for `GenBot1k`, we can run `Gendog{i}` where `i` could range from `0` to `331`. 
 
-Optionally: We provide the well-trained RL expert checkpoints [here](https://drive.google.com/file/d/16UgSzShxdfoj8ZT_WemAawXZq-wXLf7l/view?usp=sharing)(size=5G).
+Optionally: We provide the well-trained RL expert checkpoints [here] (https://drive.google.com/file/d/16UgSzShxdfoj8ZT_WemAawXZq-wXLf7l/view?usp=sharing)(size=5G).
 
 ### 2. RL Policy Evaluation
 To evaluate and visualize the trained policy, run
