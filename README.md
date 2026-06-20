@@ -80,7 +80,7 @@ For complete dataset collection, check ready-to-go scripts in `scripts/distillat
 ### 1. Distillation
 To train a student policy, we load the datasets from all robots and perform supervised learning.
 
-For complete policy distillation, check ready-to-go scripts in `scripts/distillation/urma_training_scripts`.
+For complete policy distillation, check ready-to-go scripts in `scripts/distillation/urma_distillation`.
 
 Please note that part of the dataset is cached in RAM to minimize I/O bottlenecks. A machine with 128 GB of RAM should be sufficient to run all commands. Reducing `--max_files_in_memory` will decrease the RAM requirement roughly linearly, but at the cost of relying on more localized gradient estimates, which may degrade model performance.
 
